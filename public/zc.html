@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册</title>
+		<style>
+			body {
+				background: url(img/90ed48704b6b7301fcc96f99a0750091.jpg) no-repeat;
+				background-size: 100%;
+			}
+			#box{
+				margin:150px 100px;
+				width:300px;
+				padding:50px;
+				background-color: rgba(0,0,0,.3);
+			}
+			#box input{
+				width:100%;
+				height:40px;
+			}
+			#box button{
+				width:100%;
+				height:40px;
+				background:#0e86ca;
+				cursor: pointer;
+			}
+			#mtk{
+				display:none;
+				position:fixed;
+				left:530px;
+				top:300px;
+				background:rgba(255,255,255,.5);
+				width:300px;
+				height:100px;
+				border:1px solid #0E86CA;
+			}
+			#mtk h1{
+				text-align:center;
+			}
+			#mtk button{
+				display: block;
+				margin:30px auto 0;
+				width:80px;
+				background-color:#0e86ca;
+				padding:5px 0;
+			}
+			#box a{	
+				margin-left:90px;
+				color:white;
+			}
+			#box a:hover{
+				color:blue;
+			}
+			#box button:hover{
+				background:#0e86fe;
+				color:white;
+			}
+			#mtk button:hover{
+				background:#0e86fe;
+				color:white;
+			}
+			
+		</style>
+		<link rel="stylesheet" href="css/ty.css">
+	</head>
+	<body>
+		<div id="box">
+			<input type="text" onfocus="hq1()" onblur="sq1()" placeholder="请输入你的用户名" id="uname" maxlength="12">
+			<span id="s1"></span><br><br>
+			<input type="password" onfocus="hq2()" onblur="sq2()" placeholder="请输入你的密码" id="upwd" maxlength="12">
+			<span id="s2"></span><br><br>
+			<input type="password" onfocus="hq3()" onblur="sq3()" placeholder="请再次输入你的密码" id="cpwd" maxlength="12">
+			<span id="s3"></span><br><br>
+			<button onclick="zc()">注册</button>
+		</div>
+		<div id="mtk">
+			<h1 id="mtknr"></h1>
+			<button id="mtksj">确定</button>
+		</div>
+		<script>
+			function hq1() {
+				s1.innerHTML = '用户名长度在6~9位之间';
+				s1.style.color = "white";
+				s1.style.background = "transparent";
+			}
+
+			function sq1() {
+				//创建对象
+				var xhr = new XMLHttpRequest();
+				//接收响应
+				xhr.onreadystatechange = function() {
+					if (xhr.readyState == 4 && xhr.status == 200) {
+						var result = xhr.responseText;
+						//s1.innerHTML='用户名可以使用';
+						if (result == 0 && uname.value.length >= 6 && uname.value.length <= 12) {
+							s1.innerHTML = '用户名可以使用';
+							s1.style.color = "white";
+							s1.style.background = "green";
+						} else if (result == 1) {
+							s1.innerHTML = '用户名已存在';
+							s1.style.color = "white";
+							s1.style.background = "red";
+						} else if (result == 0 && uname.value.length < 6 && uname.value.length > 0 || uname.value.length > 12) {
+							s1.innerHTML = '用户名长度必须在6~9之间';
+							s1.style.color = "white";
+							s1.style.background = "red";
+						} else {
+							s1.innerHTML = '用户名不能为空';
+							s1.style.color = "white";
+							s1.style.background = "red";
+						}
+					}
+				}
+				//创建请求
+				xhr.open('get', 'http://127.0.0.1:8080/user/zcrz?uname=' + uname.value, true);
+				//发送请求
+				xhr.send();
+				if (s1.innerHTML == '用户名可以使用') {
+					return true;
+				}
+			}
+
+			function hq2() {
+				s2.innerHTML = '密码长度在6~12位之间';
+				s2.style.color = "white";
+				s2.style.background = "transparent";
+			}
+
+			function sq2() {
+				if (upwd.value.length >= 6) {
+					s2.innerHTML = '密码格式正确';
+					s2.style.color = "white";
+					s2.style.background = "green";
+					return true;
+				} else if (upwd.value.length <= 0) {
+					s2.innerHTML = '密码不能为空';
+					s2.style.color = "white";
+					s2.style.background = "red";
+				} else if (upwd.value.length < 6) {
+					s2.innerHTML = '密码长度不能少于6位';
+					s2.style.color = "white";
+					s2.style.background = "red";
+				}
+			}
+
+			function hq3() {
+				s3.innerHTML = '密码长度在6~12位之间';
+				s3.style.color = "white";
+				s3.style.background = "transparent";
+			}
+
+			function sq3() {
+				if (cpwd.value == upwd.value && cpwd.value.length > 0) {
+					s3.innerHTML = '两次输入的密码一致';
+					s3.style.color = "white";
+					s3.style.background = "green";
+					return true;
+				} else if (cpwd.value.length <= 0) {
+					s3.innerHTML = '确认密码不能为空';
+					s3.style.color = "white";
+					s3.style.background = "red";
+				} else if (cpwd.value != upwd.value) {
+					s3.innerHTML = '两次输入的密码不一致';
+					s3.style.color = "white";
+					s3.style.background = "red";
+				}
+			}
+
+			function zc() {
+				if (sq1() == true && sq2() == true && sq3() == true) {
+					//创建对象
+					var xhr = new XMLHttpRequest();
+					//接收响应
+					xhr.onreadystatechange = function() {
+						if (xhr.readyState == 4 && xhr.status == 200) {
+							var result = xhr.responseText;
+							if (result == 1) {
+								mtk.style.display = "block";
+								mtknr.innerHTML = "注册成功";
+								mtksj.onclick = function() {
+									window.location.href = "login.html"
+								};
+							} else {
+								mtk.style.display = "block";
+								mtknr.innerHTML = "注册失败";
+								mtksj.onclick = function() {
+									mtk.style.display = "none";
+								};
+							}
+						}
+					}
+					//创建请求
+					xhr.open('post', 'http://127.0.0.1:8080/user/zc', true);
+					xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+					var formdata = 'uname=' + uname.value + '&&upwd=' + upwd.value;
+					//发送请求
+					xhr.send(formdata);
+				}
+			}
+		</script>
+	</body>
+</html>

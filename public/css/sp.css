@@ -1,0 +1,298 @@
+/* 头部导航栏设置 */
+#tb {
+	height: 40px;
+	background: rgba(0, 0, 0,.5);
+	display: flex;	
+	/* 设置头部模块的优先级  使其显示在视频上方*/
+	z-index:100;
+	position:relative;
+}
+#tb>ul>li>a {
+	background-image: url(../img/1_fsbnet_icon-sprite.png);
+	height:40px;
+	width:61.82px;
+	background-repeat: no-repeat;
+	background-position:-16px -76px;
+	display: block;
+	position: relative;
+	z-index: 900;
+}
+#tb>ul>li {
+	float: left;
+	margin: 0 20px;
+	line-height: 40px;
+	cursor: pointer;
+	color: rgba(255, 255, 255, .5);
+}
+/* 头部游戏二级图片导航 */
+#tb>ul>#yx>#tpdh {
+	position:fixed;
+	top: 40px;
+	background:#161a23;
+	width:100%;
+	display:none; 
+	transform: translateX(-134px);
+	z-index: 1000;
+}
+/* 头部游戏二级效果 */
+#tb>ul>#yx:hover #tpdh{
+	display:block;
+}
+#tpdh>ul {
+	height:200px;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#tpdh>ul>li{
+	height:180px;
+}
+#tpdh>ul>li>a>img {
+	width: 140px;
+	height: 180px;
+	margin: 0 3px;
+}
+/* 定义底部样式 */
+#footer{
+	background-color: #202020;
+	width:100%;
+	padding:50px 0;
+}
+#footer>p{
+	margin:0 auto;
+	width:1100px;
+	text-align: center;
+	color:rgba(255,255,255,.3);
+}
+/* 定义视频区域背景 */
+#body{
+	background-image: url(../img/1_assets_img_pages_media_backgrounds_videos.jpg);
+}
+#body>h1{
+	text-align: center;
+	color:white;
+	font-size: 50px;
+	font-weight: 300;
+	font-style: italic;
+	padding:170px 0 20px;
+	margin-top:-60px;
+}
+/* 定义视频快 */
+.dspmk{
+	width:50%;
+	float:left;
+	box-sizing: border-box;
+	padding:0 10px;
+}
+#body>ul{
+	width:1250px;
+	margin:0 auto;
+}
+#body>ul::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+/* 定义视频背景 */
+.sptp{
+	width:100%;
+	height:345px;
+	display: inline-block;
+	position:relative;
+	background-image: url(../img/2_media_gameplay_cinematic-trailer.32Pn2.jpg);
+	border-radius:5px;
+	border:1px solid darkgrey;
+}
+/* 定义开始按钮 */
+.sptp::before{
+	background-image: url(../img/1_assets_img_icons_youtube-btn-ylw.png);
+	content: "";
+	display: inline-block;
+	position:absolute;
+	top:0%;
+	left:0%;
+	width:100%;
+	height:100%;
+	background-repeat: no-repeat;
+	background-size: 13% auto;
+	background-position: center center;
+}
+/* 定义视频标题 */
+.spbt{
+	width:100%;
+	bottom:0;
+	left:0;
+	position:absolute;
+	background-color: rgba(3,20,26,.75);
+	color:#fff;
+	text-align: center;
+	line-height: 40px;
+}
+/* 设置悬浮在视频区域时的效果 */
+.sptp:hover{
+	box-shadow:0 1px 200px 50px red  inset;
+	border:1px solid blue;
+}
+/* 设置视频播放位置 */
+#sq{
+	position:absolute;
+	top:80px;
+	left:200px;	
+	width:1000px;
+	height:530px;
+	z-index: 999;
+	display: none;
+	overflow: hidden;
+	background-color:#030b13;
+}
+/* 设置视频播放区域 */
+#bf{
+	width:6000px;
+
+	position: absolute;
+}
+/* 清楚浮动带来的影响 */
+#bf::after{
+	content:"";
+	display: block;
+	clear: both;
+}
+.myvideo{
+	float:left;		
+	padding:0px 100px 40px;
+}
+/* 设置关闭标签样式 */
+#gbbq{
+	display:block;
+	position:absolute;
+	background-image:url(../img/1_images_heroes_detail_exit.3OOEf.png);
+	z-index: 10;
+	width:36px;
+	height:36px;
+	top:3px;
+	right:2px;
+}
+/* 设置视频上方标题 */
+#dhbt{
+	color:#333;
+	text-align:center;
+}
+/* 视频二背景*/
+#sptp2{
+	background-image: url(../img/2_media_videos_gameplay.jpg);
+}
+/* 视频三背景 */
+#sptp3{
+	background-image: url(../img/a_images_2018_11_5_0e282147eef1db225bbbcc9469efbd6d.jpg);
+}
+/* 视频四背景 */
+#sptp4{
+	background-image: url(../img/2_media_artwork_dva-animated-short.jpg);
+}
+/* 视频五背景 */
+#sptp5{
+	background-image: url(../img/2_media_artwork_reinhardt-animated-short.jpg);
+}
+/* 视频六背景 */
+#sptp6{
+	background-image: url(../img/2_media_videos_mei-animated-short.jpg);
+}
+/* 设置左右箭头 */
+#prev,#next{
+	width:64px;
+	height:69px;
+	position: absolute;
+	top:40%;
+}
+#prev{
+	left:10px;
+	background-image: url(../img/1_images_heroes_detail_arrow-left.2HQ0H.png);
+}
+#next{
+	right:10px;
+	background-image: url(../img/1_images_heroes_detail_arrow-right.1hVyK.png);
+}
+/* 设置nav的高度 */
+#nav{
+	position:absolute;
+	z-index: 98;
+	top:80px;
+	height:48px;
+	background:white;
+	width:100%;
+}
+#aylg{
+	height:48px;
+	overflow:hidden;
+	float: left;
+}
+#navlj{
+	float:left;
+}
+#navlj>ul{
+	display:flex;
+	align-items:center;
+	height:48px;
+	justify-content:flex-start;
+}
+#navlj>ul>li{
+	height:100%;
+	position: relative;
+}
+#navlj>ul>li>a{
+	display:block;
+	height:100%;
+	width:auto;
+	border-right:1px solid #e5e3dc;
+	color:#4b535d;
+	line-height: 48px;
+	padding:0 20px;
+}
+/* 设置鼠标悬停时的效果 */
+#navlj>ul>li>a:hover{
+	background:#333;
+	color:#f7931e;
+}
+/* 设置导航栏下的二级菜单 */
+.naver {
+	position: absolute;
+	top:100%;
+	width:170px;
+	background: #353c42;
+	display: none;
+}
+#nav>#navlj>ul>li>.naver li{
+	height:48px;
+	border-bottom: 1px solid #e5e3dc;
+}
+#nav>#navlj>ul>li>.naver li>a{
+	line-height:48px;
+	color:white;
+	text-align: center;
+	margin-left: 5px;
+}
+/* 鼠标悬停后显示菜单 */
+#navlj>ul>li:hover .naver{
+	display:block;
+	z-index: 990;
+}
+/* 鼠标悬停后文字改变 */
+#nav>#navlj>ul>li>.naver>li>a:hover{
+	color:#f7931e;
+}
+/* 定义购买图标样式 */
+#gmtb{
+	float:right;
+	width:113.61px;
+	height:48px;
+}
+#header>#nav>#gmtb>a{
+	display:block;
+	line-height: 48px;
+	text-align: center;
+	background: #f7931e;
+	color:#fff;
+}
+#header>#nav>#gmtb>a:hover{
+	color:#f7931e;
+}

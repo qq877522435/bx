@@ -1,0 +1,901 @@
+#header{
+	position:relative;
+}
+/* 头部导航栏设置 */
+#tb {
+	height: 40px;
+	background: rgba(0, 0, 0,.5);
+	display: flex;	
+	/* 设置头部模块的优先级  使其显示在视频上方*/
+	z-index:100;
+	position:relative;
+}
+#tb>ul>li>a {
+	background-image: url(../img/1_fsbnet_icon-sprite.png);
+	height:40px;
+	width:61.82px;
+	background-repeat: no-repeat;
+	background-position:-16px -76px;
+	display: block;
+	position: relative;
+	z-index: 900;
+}
+#tb>ul>li {
+	float: left;
+	margin: 0 20px;
+	line-height: 40px;
+	cursor: pointer;
+	color: rgba(255, 255, 255, .5);
+}
+/* 头部游戏二级图片导航 */
+#tb>ul>#yx>#tpdh {
+	position: fixed;
+	top: 40px;
+	background:#161a23;
+	width:100%;
+	display:none; 
+	transform: translateX(-134px);
+	z-index: 1000;
+}
+/* 头部游戏二级效果 */
+#tb>ul>#yx:hover #tpdh{
+	display:block;
+}
+#tpdh>ul {
+	height: 200px;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#tpdh>ul>li{
+	height: 180px;
+}
+#tpdh>ul>li>a>img {
+	width: 140px;
+	height: 180px;
+	margin: 0 3px;
+}
+/* 头部定义视频位置 */
+#video{
+	/* 设置视频的优先级为最低 */
+	z-index:1; 
+	position:absolute;
+	top:-103px;
+}
+/* 定义暂停按钮样式 */
+#ztan{
+	position: absolute;
+	top:612px;
+	left:16px;
+	z-index: 1000;
+	cursor: pointer;
+}
+#antb{
+	width:32px;
+	height:32px;
+	background-image: url(../img/1_assets_img_icons_menus_video_control_icon.png);
+	background-repeat: no-repeat;
+	display:inline-block;
+	vertical-align: middle;
+	margin-right:5px;
+	background-position:0 0;
+}
+#anwb{
+	color:#FFFFFF;
+}
+/* 视频上方按钮样式 */
+#span{
+	position:absolute;
+	top:441px;
+	left:512px;
+	/* 设置按钮在视频上方 */
+	z-index:990;
+	width:352px;
+}
+/* 设置nav的高度 */
+#nav{
+	position:absolute;
+	z-index: 98;
+	top:80px;
+	height:48px;
+	background:white;
+	width:100%;
+}
+#aylg{
+	height:48px;
+	overflow:hidden;
+	float: left;
+}
+#navlj{
+	float:left;
+}
+#navlj>ul{
+	display:flex;
+	align-items:center;
+	height:48px;
+	justify-content:flex-start;
+}
+#navlj>ul>li{
+	height:100%;
+	position: relative;
+}
+#navlj>ul>li>a{
+	display:block;
+	height:100%;
+	width:auto;
+	border-right:1px solid #e5e3dc;
+	color:#4b535d;
+	line-height: 48px;
+	padding:0 20px;
+}
+/* 设置鼠标悬停时的效果 */
+#navlj>ul>li>a:hover{
+	background:#333;
+	color:#f7931e;
+}
+#header >#span> a{
+	display:inline-block;
+	width:156px;
+	height:42px;
+	text-align: center;
+	line-height: 42px;
+	color:white;
+}
+#header>#span>a:first-child{
+	background:#00a5e2;
+}
+#header>#span>a:last-child{
+	background:#ff9c00;
+}
+/* 设置导航栏下的二级菜单 */
+.naver {
+	position: absolute;
+	top:100%;
+	width:170px;
+	background: #353c42;
+	display: none;
+}
+#nav>#navlj>ul>li>.naver li{
+	height:48px;
+	border-bottom: 1px solid #e5e3dc;
+}
+#nav>#navlj>ul>li>.naver li>a{
+	line-height:48px;
+	color:white;
+	text-align: center;
+	margin-left: 5px;
+}
+/* 鼠标悬停后显示菜单 */
+#navlj>ul>li:hover .naver{
+	display:block;
+	z-index: 990;
+}
+/* 鼠标悬停后文字改变 */
+#nav>#navlj>ul>li>.naver>li>a:hover{
+	color:#f7931e;
+}
+/* 定义购买图标样式 */
+#gmtb{
+	float:right;
+	width:113.61px;
+	height:48px;
+}
+#header>#nav>#gmtb>a{
+	display:block;
+	line-height: 48px;
+	text-align: center;
+	background: #f7931e;
+	color:#fff;
+}
+#header>#nav>#gmtb>a:hover{
+	color:#f7931e;
+}
+/* 视频上方图片样式 */
+#sptj{
+	position:absolute;
+	top:341px;
+	left:502px;
+	z-index:10;
+}
+#header>#sptj>img{
+	width:350px;
+	height:77.77px;
+	position:relative;
+}
+/* 定义主体位置 */
+#body{
+	margin:650px auto 0 auto;
+	width:1200px;
+	padding-bottom:30px;
+}
+/*  清楚浮动带来的高度坍塌*/
+#body::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+/* 定义主体图片上方的标题 */
+#body>h1{
+	text-align:center;
+	margin:0 0 30px;
+	font-size:48px;
+	color:#333333;
+}
+/* 定义主体图片位置 */
+.xwtp{
+	width:397px;
+	display: block;
+	margin-bottom: 15px ;
+	padding:10px;
+	float:left;
+	position:relative;
+	color:#f0edf2;
+	text-align: left;
+	box-sizing: border-box;
+}
+/* 定义图片盒子 */
+.xwbox{
+	width:377px;
+	height:212px;
+}
+/* 定义图片位置 */
+.xwnr{
+	width:371px;
+	height:206px;
+}
+/* 定义覆盖在图片上的文字位置 */
+.xwlj{
+	position: absolute;
+	top:170px;
+	color:white;
+	background:rgba(0,0,0,.75);
+	width:371px;
+	box-sizing: border-box;
+	padding:10px 20px;
+}
+/* 定义新闻按钮 */
+#xwan{
+	margin:0 auto;
+	display: block;
+	width:259px;
+	height:41px;
+	background: #00a5e2;
+	color:#fff;
+	font-size: 1.3rem;
+	cursor: pointer;
+}
+/* 定义新闻按钮悬停时的效果 */
+#xwan:hover{
+	background: #00b9ff;
+}
+/* 定义新闻按钮下方内容 */
+#body1{
+	background-image: url(../img/1_assets_img_pages_home_candy.jpg);
+	text-align: center;
+	padding: 80px 0;
+	background-position:top;
+	background-size: cover;
+}
+/* 定义新闻下方标题 */
+#body1bt{
+	width:1250px;
+	margin:0 auto;
+	padding:0 30px;
+}
+#body1bt>h2{
+	font-size:60px;
+	font-weight:400;
+	font-style: italic;
+	margin-bottom: 44px;
+}
+#body1bt>div{
+	width:632px;
+	margin:0 auto;
+	margin-bottom:3px;
+	font-size:24px;
+	line-height:40px;
+}
+/* 定义人物模型位置 */
+#rwmx{
+	height:200px;
+	background:linear-gradient(90deg,rgba(42,55,81,0) 0,rgba(42,55,81,.8) 25%,rgba(42,55,81,.8) 75%,rgba(42,55,81,0));
+	background-position: 50%;
+	background-size:1920px auto;
+	margin-top:150px;
+}
+/* 定义人物图标盒子 */
+#rwtbhz{
+	padding:0 30px;
+	width:1250px;
+	margin:80px auto 0 auto;
+}
+#body1>#body1box>#rwtbhz>ul{
+	padding:0;
+}
+#body1>#body1box>#rwtbhz>ul>li{
+	display: inline-block;
+}
+.rwmx{
+	display: block;
+	width:70px;
+	height: 84px;
+	margin:2.4px 6px;
+	border:3px solid #f0edf2;
+	background-color:rgba(51,51,51,.9);	
+	overflow: hidden;
+	border-radius: 7px;
+	transform: skew(25rad);
+}
+/* 定义人物图标位置 */
+.tb{
+	background-image: url(../img/1_images_heroes_dva_icon-portrait.png);
+	display: inline-block;
+	height:100%;
+	background-size: auto 100%;
+	background-position:50% 50%;
+	transform: skew(-25rad) translateX(-5px);
+	width:calc(100% + 10px);
+	cursor: pointer;
+}
+#body1>#body1box>#rwtbhz>ul>li>span{
+	color:#333;
+	margin-left:-9px;
+	position:relative;
+	top:-7px;
+	display:inline-block;
+}
+/* 给body1box绝对定位,让人物模型的移动有参照物 */
+#body1box{
+	position: relative;
+}
+/* 给人物模型大图相对定位,移动位置 */
+.rwdt{
+	background-image: url(../img/1_images_v2_home_overlay_dva.png);
+	width:500px;
+	height:400px;
+	position: absolute;
+	top:244px;
+	left:280px;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	display: none;
+}
+/* 给人物简介设置相对定位,移动位置 */
+.rwjj{
+	position: absolute;
+	top:380px;
+	left:755px;
+	display: none;
+}
+/* 设置人物标题样式 */
+.rwbt{
+	color:#F0EDF2;
+	text-shadow: 0 1px 2px #000;
+	font-size:68px;
+	font-style: italic;
+}
+/* 设置人物背景介绍样式 */
+.rwbj{
+	color:#F0EDF2;
+	height:48px;
+	line-height:25px
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx1,#body1>#body1box>#rwtbhz>ul>li:hover #jj1{
+	display: block;
+}
+/* 当鼠标悬停时，人物图标背景变黄 */
+#body1>#body1box>#rwtbhz>ul>li:hover  .rwmx{
+	background-color: #f3971e;
+	width:80px;
+	height:90px;
+}
+/* 当鼠标悬停时,人物名称往上浮 */
+#body1>#body1box>#rwtbhz>ul>li:hover  span{
+	background-color:#F0EDF2;
+	color:#333;
+	border-radius:6px;
+	top:-12px;
+}
+/* 设置第二个图标的样式 */
+#tb2{
+	background:url(../img/1_images_heroes_orisa_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第二个图标大图的样式 */
+#mx2{
+	background-image: url(../img/1_images_v2_home_overlay_orisa.png);
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	top:270px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx2,#body1>#body1box>#rwtbhz>ul>li:hover #jj2{
+	display: block;
+}
+/* 设置第三个图标的样式 */
+#tb3{
+	background:url(../img/1_images_heroes_reinhardt_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第三个图标大图的样式 */
+#mx3{
+	background-image: url(../img/1_images_v2_home_overlay_reinhardt.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx3,#body1>#body1box>#rwtbhz>ul>li:hover #jj3{
+	display: block;
+}
+/* 设置第四个图标的样式 */
+#tb4{
+	background:url(../img/1_images_heroes_roadhog_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第四个图标大图的样式 */
+#mx4{
+	background-image: url(../img/1_images_v2_home_overlay_roadhog.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx4,#body1>#body1box>#rwtbhz>ul>li:hover #jj4{
+	display: block;
+}
+/* 设置第五个图标的样式 */
+#tb5{
+	background:url(../img/1_images_heroes_winston_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第五个图标大图的样式 */
+#mx5{
+	background-image: url(../img/1_images_v2_home_overlay_winston.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}
+/* 设置第五个大图简介的位置 */
+#jj5{
+	left:690px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx5,#body1>#body1box>#rwtbhz>ul>li:hover #jj5{
+	display: block;
+}
+/* 设置第六个图标的样式 */
+#tb6{
+	background:url(../img/1_images_heroes_zarya_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第六个图标大图的样式 */
+#mx6{
+	background-image: url(../img/1_images_v2_home_overlay_zarya.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:400px
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx6,#body1>#body1box>#rwtbhz>ul>li:hover #jj6{
+	display: block;
+}
+/* 设置第七个图标的样式 */
+#tb7{
+	background:url(../img/1_images_heroes_wrecking-ball_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第七个图标大图的样式 */
+#mx7{
+	background-image: url(../img/1_images_v2_home_overlay_wrecking-ball.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx7,#body1>#body1box>#rwtbhz>ul>li:hover #jj7{
+	display: block;
+}
+/* 设置第八个图标的样式 */
+#tb8{
+	background:url(../img/1_assets_images_hero_baptiste_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第八个图标大图的样式 */
+#mx8{
+	background-image: url(../img/1_assets_images_hero_baptiste_full-portrait.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:450px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx8,#body1>#body1box>#rwtbhz>ul>li:hover #jj8{
+	display: block;
+}
+/* 设置第九个图标的样式 */
+#tb9{
+	background:url(../img/1_images_heroes_ashe_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第九个图标大图的样式 */
+#mx9{
+	background-image: url(../img/1_images_v2_home_overlay_ashe.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:480px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx9,#body1>#body1box>#rwtbhz>ul>li:hover #jj9{
+	display: block;
+}
+/* 设置第十个图标的样式 */
+#tb10{
+	background:url(../img/1_images_heroes_bastion_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第十个图标大图的样式 */
+#mx10{
+	background-image: url(../img/1_images_v2_home_overlay_bastion.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx10,#body1>#body1box>#rwtbhz>ul>li:hover #jj10{
+	display: block;
+}
+/* 设置第十一个图标的样式 */
+#tb11{
+	background:url(../img/1_assets_images_hero_doomfist_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第十一个图标大图的样式 */
+#mx11{
+	background-image: url(../img/1_images_v2_home_overlay_doomfist.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:400px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx11,#body1>#body1box>#rwtbhz>ul>li:hover #jj11{
+	display: block;
+}
+/* 设置第十二个图标的样式 */
+#tb12{
+	background:url(../img/1_images_heroes_genji_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第十二个图标大图的样式 */
+#mx12{
+	background-image: url(../img/1_images_v2_home_overlay_genji.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:400px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx12,#body1>#body1box>#rwtbhz>ul>li:hover #jj12{
+	display: block;
+}
+/* 设置第十三个图标的样式 */
+#tb13{
+	background:url(../img/1_images_heroes_hanzo_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第十三个图标大图的样式 */
+#mx13{
+	background-image: url(../img/1_images_v2_home_overlay_hanzo.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx13,#body1>#body1box>#rwtbhz>ul>li:hover #jj13{
+	display: block;
+}
+/* 设置第十四个图标的样式 */
+#tb14{
+	background:url(../img/1_images_heroes_junkrat_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第十四个图标大图的样式 */
+#mx14{
+	background-image: url(../img/1_images_v2_home_overlay_junkrat.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:400px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx14,#body1>#body1box>#rwtbhz>ul>li:hover #jj14{
+	display: block;
+}
+/* 设置第十五个图标的样式 */
+#tb15{
+	background:url(../img/1_images_heroes_mccree_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第十五个图标大图的样式 */
+#mx15{
+	background-image: url(../img/1_images_v2_home_overlay_mccree.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:400px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx15,#body1>#body1box>#rwtbhz>ul>li:hover #jj15{
+	display: block;
+}
+/* 设置第十六个图标的样式 */
+#tb16{
+	background:url(../img/1_images_heroes_frost_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第十六个图标大图的样式 */
+#mx16{
+	background-image: url(../img/1_images_v2_home_overlay_mei.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:400px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx16,#body1>#body1box>#rwtbhz>ul>li:hover #jj16{
+	display: block;
+}
+/* 设置第十七个图标的样式 */
+#tb17{
+	background:url(../img/1_images_heroes_pharah_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第十七个图标大图的样式 */
+#mx17{
+	background-image: url(../img/1_images_v2_home_overlay_pharah.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:400px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx17,#body1>#body1box>#rwtbhz>ul>li:hover #jj17{
+	display: block;
+}
+/* 设置第十八个图标的样式 */
+#tb18{
+	background:url(../img/1_images_heroes_reaper_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第十八个图标大图的样式 */
+#mx18{
+	background-image: url(../img/1_images_v2_home_overlay_reaper.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:400px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx18,#body1>#body1box>#rwtbhz>ul>li:hover #jj18{
+	display: block;
+}
+/* 设置第十九个图标的样式 */
+#tb19{
+	background:url(../img/1_images_heroes_soldier-76_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第十九个图标大图的样式 */
+#mx19{
+	background-image: url(../img/1_images_v2_home_overlay_soldier-76.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:480px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx19,#body1>#body1box>#rwtbhz>ul>li:hover #jj19{
+	display: block;
+}
+/* 设置第二十个图标的样式 */
+#tb20{
+	background:url(../img/1_images_heroes_sombra_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第二十个图标大图的样式 */
+#mx20{
+	background-image: url(../img/1_images_v2_home_overlay_sombra.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:500px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx20,#body1>#body1box>#rwtbhz>ul>li:hover #jj20{
+	display: block;
+}
+/* 设置第二一个图标的样式 */
+#tb21{
+	background:url(../img/1_images_heroes_symmetra_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第二一个图标大图的样式 */
+#mx21{
+	background-image: url(../img/1_images_v2_home_overlay_symmetra.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:400px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx21,#body1>#body1box>#rwtbhz>ul>li:hover #jj21{
+	display: block;
+}
+/* 设置第二二个图标的样式 */
+#tb22{
+	background:url(../img/1_images_heroes_torbjorn_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第二二个图标大图的样式 */
+#mx22{
+	background-image: url(../img/1_images_v2_home_overlay_torbjorn.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx22,#body1>#body1box>#rwtbhz>ul>li:hover #jj22{
+	display: block;
+}
+/* 设置第二三个图标的样式 */
+#tb23{
+	background:url(../img/1_images_heroes_tracer_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第二三个图标大图的样式 */
+#mx23{
+	background-image: url(../img/1_images_v2_home_overlay_tracer.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:500px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx23,#body1>#body1box>#rwtbhz>ul>li:hover #jj23{
+	display: block;
+}
+/* 设置第二四个图标的样式 */
+#tb24{
+	background:url(../img/1_images_heroes_widowmaker_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第二四个图标大图的样式 */
+#mx24{
+	background-image: url(../img/1_images_v2_home_overlay_widowmaker.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:500px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx24,#body1>#body1box>#rwtbhz>ul>li:hover #jj24{
+	display: block;
+}
+/* 设置第二五个图标的样式 */
+#tb25{
+	background:url(../img/1_images_heroes_ana_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第二五个图标大图的样式 */
+#mx25{
+	background-image: url(../img/1_images_v2_home_overlay_ana.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:500px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx25,#body1>#body1box>#rwtbhz>ul>li:hover #jj25{
+	display: block;
+}
+/* 设置第二六个图标的样式 */
+#tb26{
+	background:url(../img/1_images_heroes_brigitte_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第二六个图标大图的样式 */
+#mx26{
+	background-image: url(../img/1_images_v2_home_overlay_brigitte.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:420px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx26,#body1>#body1box>#rwtbhz>ul>li:hover #jj26{
+	display: block;
+}
+/* 设置第二七个图标的样式 */
+#tb27{
+	background:url(../img/1_images_heroes_lucio_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第二七个图标大图的样式 */
+#mx27{
+	background-image: url(../img/1_images_v2_home_overlay_lucio.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:450px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx27,#body1>#body1box>#rwtbhz>ul>li:hover #jj27{
+	display: block;
+}
+/* 设置第二八个图标的样式 */
+#tb28{
+	background:url(../img/1_images_heroes_mercy_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第二八个图标大图的样式 */
+#mx28{
+	background-image: url(../img/1_images_v2_home_overlay_mercy.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:500px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx28,#body1>#body1box>#rwtbhz>ul>li:hover #jj28{
+	display: block;
+}
+/* 设置第二九个图标的样式 */
+#tb29{
+	background:url(../img/1_assets_images_hero_moira_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第二九个图标大图的样式 */
+#mx29{
+	background-image: url(../img/1_images_v2_home_overlay_moira-full-portrait.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:450px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx29,#body1>#body1box>#rwtbhz>ul>li:hover #jj29{
+	display: block;
+}
+/* 设置第三十个图标的样式 */
+#tb30{
+	background:url(../img/1_images_heroes_zenyatta_icon-portrait.png);
+	background-size: auto 100%;
+	background-position:50%;
+}
+/* 设置第三十个图标大图的样式 */
+#mx30{
+	background-image: url(../img/1_images_v2_home_overlay_zenyatta.png);	
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	left:450px;
+}
+/* 当鼠标悬停时,人物图和人物简介才会显示 */
+#body1>#body1box>#rwtbhz>ul>li:hover  #mx30,#body1>#body1box>#rwtbhz>ul>li:hover #jj30{
+	display: block;
+}
+/* 定义底部样式 */
+#footer{
+	background-color: #202020;
+	width:100%;
+	padding:50px 0;
+}
+#footer>p{
+	margin:0 auto;
+	width:1100px;
+	text-align: center;
+	color:rgba(255,255,255,.3);
+}

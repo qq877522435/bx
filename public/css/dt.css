@@ -1,0 +1,338 @@
+
+/* 头部导航栏设置 */
+#tb {
+	height: 40px;
+	background: rgba(0, 0, 0,.5);
+	display: flex;	
+	/* 设置头部模块的优先级  使其显示在视频上方*/
+	z-index:100;
+	position:relative;
+}
+#tb>ul>li>a {
+	background-image: url(../img/1_fsbnet_icon-sprite.png);
+	height:40px;
+	width:61.82px;
+	background-repeat: no-repeat;
+	background-position:-16px -76px;
+	display: block;
+	position: relative;
+	z-index: 900;
+}
+#tb>ul>li {
+	float: left;
+	margin: 0 20px;
+	line-height: 40px;
+	cursor: pointer;
+	color: rgba(255, 255, 255, .5);
+}
+/* 头部游戏二级图片导航 */
+#tb>ul>#yx>#tpdh {
+	position:fixed;
+	top: 40px;
+	background:#161a23;
+	width:100%;
+	display:none; 
+	transform: translateX(-134px);
+	z-index: 1000;
+}
+/* 头部游戏二级效果 */
+#tb>ul>#yx:hover #tpdh{
+	display:block;
+}
+#tpdh>ul {
+	height:200px;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#tpdh>ul>li{
+	height:180px;
+}
+#tpdh>ul>li>a>img {
+	width: 140px;
+	height: 180px;
+	margin: 0 3px;
+}
+/* 定义底部样式 */
+#footer{
+	background-color: #202020;
+	width:100%;
+	padding:50px 0;
+}
+#footer>p{
+	margin:0 auto;
+	width:1100px;
+	text-align: center;
+	color:rgba(255,255,255,.3);
+}
+/* 设置nav的高度 */
+#nav{
+	position:absolute;
+	z-index: 98;
+	top:80px;
+	height:48px;
+	background:white;
+	width:100%;
+}
+#aylg{
+	height:48px;
+	overflow:hidden;
+	float: left;
+}
+#navlj{
+	float:left;
+}
+#navlj>ul{
+	display:flex;
+	align-items:center;
+	height:48px;
+	justify-content:flex-start;
+}
+#navlj>ul>li{
+	height:100%;
+	position: relative;
+}
+#navlj>ul>li>a{
+	display:block;
+	height:100%;
+	width:auto;
+	border-right:1px solid #e5e3dc;
+	color:#4b535d;
+	line-height: 48px;
+	padding:0 20px;
+}
+/* 设置鼠标悬停时的效果 */
+#navlj>ul>li>a:hover{
+	background:#333;
+	color:#f7931e;
+}
+/* 设置导航栏下的二级菜单 */
+.naver {
+	position: absolute;
+	top:100%;
+	width:170px;
+	background: #353c42;
+	display: none;
+}
+#nav>#navlj>ul>li>.naver li{
+	height:48px;
+	border-bottom: 1px solid #e5e3dc;
+}
+#nav>#navlj>ul>li>.naver li>a{
+	line-height:48px;
+	color:white;
+	text-align: center;
+	margin-left: 5px;
+}
+/* 鼠标悬停后显示菜单 */
+#navlj>ul>li:hover .naver{
+	display:block;
+	z-index: 990;
+}
+/* 鼠标悬停后文字改变 */
+#nav>#navlj>ul>li>.naver>li>a:hover{
+	color:#f7931e;
+}
+/* 定义购买图标样式 */
+#gmtb{
+	float:right;
+	width:113.61px;
+	height:48px;
+}
+#header>#nav>#gmtb>a{
+	display:block;
+	line-height: 48px;
+	text-align: center;
+	background: #f7931e;
+	color:#fff;
+}
+#header>#nav>#gmtb>a:hover{
+	color:#f7931e;
+}
+/* 轮播图样式 */
+/* 盒子样式 */
+#box{
+	width:678px;
+	height: 424px;
+	margin:0px auto;
+	position:relative;
+	overflow:hidden;
+	padding: 20px 0;
+}
+/* 设置图片滑动框样式 */
+#list{
+	/* 宽度为图片的总宽度 */
+	width:2712px; 
+	height:424px;
+	position:absolute;
+	z-index: 1;
+}
+/* 设置图片样式 */
+#box>#list img{
+	float: left;
+}
+/* 设置按钮框样式 */
+#button{
+	position: absolute;
+	right:200px;
+	bottom:25px;
+	height:20px;
+	width:200px;
+	z-index: 2;
+}
+/* 设置按钮样式 */
+#button span{
+	cursor: pointer;
+	float: left;
+	height: 20px;  
+    width: 20px; 
+    border-radius: 50%;
+	margin-right: 7px;  
+	background: white; 
+}
+/* 设置按钮默认显示的背景颜色 */
+#button .on{
+	background: lightblue;
+}
+/* 设置左右箭头 */
+.arrow{
+	cursor: pointer;
+	line-height: 40px;
+	text-align: center;
+	font-size: 2 0px;/*设置箭头的大小*/ 
+	width: 40px;  
+    height: 40px; 
+	position: absolute;  
+	top: 200px;
+	z-index: 2;
+	color: #fff;
+	background:rgba(255,255,255,.5) ;  
+	display: block;
+}
+#prev {  
+    left:1px;  
+}     
+#next {  
+    right: 1px;  
+} 
+.arrow:hover {  
+    background-color:#E98352;  
+}
+/* jj的样式 */
+#jj{
+	text-align: center;
+}
+#jj>h3{
+	font-style: italic;
+	font-size: 48px;
+	color:black;
+}
+#jj>p{
+	line-height: 30px;
+	margin-bottom:20px;
+}
+/* 设置body背景 */
+#body{
+	background-image: url(../img/1_assets_img_pages_home_candy.jpg);
+}
+/* 设置赛事模块内容 */
+#ss{
+	width:1289px;
+	height:360px;
+	margin:20px auto 0;
+	background-color: #e9e9e7;
+	display: flex;
+	
+}
+.ssmk{
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	flex:1 0 10%;
+	border:1px solid #a1a1a1;
+	transition:all .4s linear ; 
+}
+.sstp{
+	max-width:100%;
+	margin-right:10px;
+	transform: scale(.7);
+	transition:all .2s linear  ;
+}
+.sswb{
+	max-width:0px;
+	opacity: 0;
+	overflow: hidden;
+	transform-origin: left center;	
+}
+.ssmk.xg{
+	flex-basis:54%;
+	box-shadow:0 0 50px 10px #fff inset;
+}
+.ssmk.xg .sswb{
+	max-width:516px;	
+	opacity: 1;
+	transition:all .1ms linear .6s;
+}
+.ssmk.xg .sstp{
+	transform:scale(.85);
+}
+.sswb>h2:first-child{
+	margin-bottom:10px;
+}
+/* body下的第一个标题 */
+#body>h1{
+	text-align: center;
+	padding-top:100px;
+	font-style: italic;
+	font-size:50px;
+}
+/* 世界杯 */
+#sjb{
+	height:218px;
+	background-image: url(../img/1_assets_img_pages_esports_v1_worldcup-background.jpg);
+	padding: 72px 0;
+	background-size: cover;
+	background-position:top;
+}
+/* 世界杯模块 */
+#sjbmk{
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+#sjbmk>div:first-child{
+	margin-right:20px;
+}
+#sjbmk>div:last-child{
+	color:white;
+}
+#sjbmk>div>h2:nth-child(1){
+	font-size: 40px;
+}
+#sjbmk>div>p:nth-child(2){
+	margin:10px 0;
+}
+#sjbmk>div>a:nth-child(3){
+	display: inline-block;
+	color:#fefefe;
+	border-radius: 2px;
+	font-weight: 700;
+	cursor: pointer;
+	background-color: #ff9c00;
+	padding: 6px 16px;
+	font-size: 1.2rem;
+}
+#sjbmk>div>a:nth-child(3):hover{
+	background-color: #ff9e59;
+}
+#sjbmk>div>a:nth-child(3)::after{
+	content: "";
+	width:16px;
+	height:16px;
+	display: inline-block;
+	background-image: url(../img/1_assets_img_pages_esports_v1_link-icon-white.png);
+	background-repeat: no-repeat;
+	background-size: 70%;
+	margin-left: 8px;
+	vertical-align: middle;
+}
